@@ -1,5 +1,5 @@
 <script setup>
-import MainNavbar from './components/MainNavbar.vue'
+import MainNavbar from './components/MainNavBar.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import { RouterView } from 'vue-router'
 </script>
