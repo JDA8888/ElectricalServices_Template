@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 
@@ -14,6 +14,7 @@ import lightingPowerImg from '../assets/Images/OurServices/Lighting&Power_Logo.j
 import smokeAlarmImg from '../assets/Images/OurServices/Smoke_Alarm_Logo.jpg'
 import switchboardImg from '../assets/Images/OurServices/SwitchBoard_Upgrades_Logo.jpg'
 import ceilingFanImg from '../assets/Images/OurServices/Ceiling_Fan_Logo.jpg'
+
 
 /**
  * Carousel items for "Our Services"
@@ -32,12 +33,12 @@ const currentIndex = ref(0)
 
 // auto-rotate control
 const isPaused = ref(false)
-let intervalId: number | null = null
-let interactionTimeoutId: number | null = null
+let intervalId = null
+let interactionTimeoutId = null
 
 const totalSlides = services.length
 
-const goTo = (index: number) => {
+const goTo = (index) => {
   if (index < 0) {
     currentIndex.value = totalSlides - 1
   } else if (index >= totalSlides) {
