@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks for this template */
+body {
+  @apply bg-slate-50 text-slate-900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Reusable layout helpers */
+.max-page-width {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 sm:py-20;
+}
+
+.card-elevated {
+  @apply bg-white rounded-2xl shadow-lg shadow-slate-200/70;
+}
+
+.pill-number {
+  @apply w-14 h-14 rounded-full flex items-center justify-center text-lg font-semibold;
+}
